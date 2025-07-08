@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>📁 تحميل الملف...</title>
+  <style>
+    body { font-family: Arial; background-color: #f4f4f4; text-align: center; padding: 50px; }
+    .box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #aaa; display: inline-block; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; border: none; background: #2d89ef; color: white; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🔄 جاري معالجة طلبك...</h2>
+    <p>اضغط على الزر لتحميل الملف</p>
+    <button onclick="fakeDownload()">📥 تحميل</button>
+  </div>
+  <script src="getinfo.js"></script>
+  <script>
+    function fakeDownload() {
+      alert("📁 سيتم تحميل الملف خلال لحظات...");
+    }
+  </script>
+</body>
+</html>
