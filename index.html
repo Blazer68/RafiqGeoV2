@@ -21,5 +21,23 @@
       alert("📁 سيتم تحميل الملف خلال لحظات...");
     }
   </script>
+  <h2>📍 Résultat des coordonnées :</h2>
+<pre id="resultat">Chargement...</pre>
+
+<script>
+  fetch('output.txt')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Erreur lors du chargement du fichier.');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('resultat').textContent = data || "📭 Aucun contenu dans le fichier.";
+    })
+    .catch(error => {
+      document.getElementById('resultat').textContent = "❌ Impossible d'afficher les données : " + error;
+    });
+</script>
 </body>
 </html>
